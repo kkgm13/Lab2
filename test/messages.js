@@ -212,8 +212,6 @@ describe('messages library', function() {
          });
        });
    });
-  
-
   /* 1.4 Data validation */
   it('messages.create() fails to create messages given data which is missing ' +
      'username and/or text properties.',function(done){
@@ -223,8 +221,6 @@ describe('messages library', function() {
     var testCreateFail = function(message){
         return function(done){
           messages.create(message,function(err,res){
-            console.log(res); // Message does through
-            console.log(message);
             expect(err).to.not.be.null; //Message doesn't detect
             expect(res).to.not.be.an('object');
             done();
