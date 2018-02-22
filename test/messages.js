@@ -109,15 +109,12 @@ describe('messages library', function() {
            messages.readUsername(validMessages[READ_USER_IDX].username,
            function(err,res){
              expect(err).to.be.null;
-
              expect(res).to.be.an('array');
              expect(res.length).to.equal(1);
-
              expect(res[0].username).to.equal(
                validMessages[READ_USER_IDX].username);
              expect(res[0].text).to.equal(
                validMessages[READ_USER_IDX].text);
-
              done();
            });
          });
@@ -277,9 +274,7 @@ describe('messages library', function() {
     });
   });
   
-
   /* 1.5 Security */
-  /*
   it('messages passed to messages.create() are sanitized to remove dangerous ' +
      'HTML before being stored',function(done){
     const dangerousHTML = '<script>maliciousCode()</script>';
@@ -343,5 +338,4 @@ describe('messages library', function() {
         });
       });
   });
-  */
 });

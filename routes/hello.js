@@ -9,7 +9,7 @@ router.get('/', function(req, res){
 
 //define the error state route
 router.post('/', function(req, res){
-	res.send('NOT FOUND!');
+	res.send('NOT FOUND!\n' + status.METHOD_NOT_ALLOWED);
 });
 
 //Export
